@@ -222,8 +222,9 @@ toMarkdown = function (input, options) {
   }
   output = getContent(clone)
 
+  // Forsythia may generate multiple linebreaks('\n'), more than two.
   return output.replace(/^[\t\r\n]+|[\t\r\n\s]+$/g, '')
-    .replace(/\n\s+\n/g, '\n\n')
+    // .replace(/\n\s+\n/g, '\n\n')
     // .replace(/\n{3,}/g, '\n\n')
 }
 
