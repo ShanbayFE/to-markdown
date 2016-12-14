@@ -42,7 +42,8 @@ function isVoid (node) {
 
 function htmlToDom (string) {
   var tree = new HtmlParser().parseFromString(string, 'text/html')
-  collapse(tree.documentElement, isBlock)
+  // Not remove dom whitespace
+  // collapse(tree.documentElement, isBlock)
   return tree
 }
 
