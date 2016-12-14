@@ -43,7 +43,7 @@ function isVoid (node) {
 
 function htmlToDom (string) {
   var tree = new HtmlParser().parseFromString(string, 'text/html')
-  // Not remove dom whitespace
+  // Not remove dom whitespace for Forsythia
   // collapse(tree.documentElement, isBlock)
   return tree
 }
